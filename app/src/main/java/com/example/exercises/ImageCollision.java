@@ -124,7 +124,7 @@ public class ImageCollision extends View {
     }
     public void visible ()
     {
-        newposition();
+        //newposition();
         image2paint.setAlpha(255);
         img2 = BitmapFactory.decodeResource(getResources(),R.drawable.ball);
     }
