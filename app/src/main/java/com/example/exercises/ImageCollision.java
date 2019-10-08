@@ -56,7 +56,7 @@ public class ImageCollision extends View {
         canvaspaint.setColor(Color.rgb(red,green,blue));
         canvas.drawColor(Color.rgb(red,green,blue));
 
-        ball = Bitmap.createScaledBitmap(img2, 200, 200, true);
+        ball = Bitmap.createScaledBitmap(img2, (int) ballx, (int) bally, true);
         canvas.drawBitmap(ball, ballx, bally, image2paint);
 
         Paint painttext = new Paint();
@@ -104,7 +104,7 @@ public class ImageCollision extends View {
             red = r.nextInt(255);
             blue = r.nextInt(255);
             green = r.nextInt(255);
-
+            newposition();
             invisible();
         }
         return score;
