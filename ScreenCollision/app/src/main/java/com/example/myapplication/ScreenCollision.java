@@ -8,14 +8,34 @@ import android.view.View;
 
 public class ScreenCollision extends View {
 
+    float x = 50;
+    float y = 50;
+    float imgw, imgh;
 
-    public ScreenCollision(Context context) {
+
+    public ScreenCollision(Context context)
+    {
         super(context);
     }
+
     @Override
     protected void onDraw (Canvas canvas) {
         super.onDraw(canvas);
         Bitmap Ball = BitmapFactory.decodeResource(getResources(),R.drawable.spikeball);
-        canvas.drawBitmap(Ball, 150, 200, null);
+        Bitmap Ballscale = Bitmap.createScaledBitmap(Ball, 200, 200, true);
+        imgh = Ballscale.getHeight();
+        imgw = Ballscale.getWidth();
+
+        canvas.drawBitmap(Ballscale, x, y, null);
+
+        if (x + Ballscale.getWidth() <= canvas.getWidth()) {
+            x = x + 10;
+        } else if (y + Ballscale.getHeight() <= canvas.getHeight()) {
+            y = y + 10;
+        } else if (x + Ballscale.getWidth() <= canvas.getWidth()) {
+            x = x - 10;
+        }
+        invalidate();
+
     }
 }

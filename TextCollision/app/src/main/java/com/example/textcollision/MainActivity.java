@@ -1,10 +1,7 @@
-package com.example.myapplication;
+package com.example.textcollision;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.graphics.Canvas;
 import android.os.Bundle;
 
 public class MainActivity extends AppCompatActivity {
@@ -12,10 +9,8 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-       // setContentView(new ScreenCollision(this));
-        setContentView(new ImageMovement(this));
+        setContentView(R.layout.activity_main);
+        setContentView(new TextCollision(this));
+
     }
-
-
-
 }
