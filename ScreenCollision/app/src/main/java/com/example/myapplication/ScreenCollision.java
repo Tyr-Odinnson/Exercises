@@ -8,8 +8,8 @@ import android.view.View;
 
 public class ScreenCollision extends View {
 
-    float x = 50;
-    float y = 50;
+    float x = 0;
+    float y = 0;
     float imgw, imgh;
 
 
